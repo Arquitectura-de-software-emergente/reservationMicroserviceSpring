@@ -93,13 +93,35 @@ public class ReservationController {
         return new ResponseEntity<>(reservations, HttpStatus.OK);
     }
 
+   // @GetMapping("/reservations/by-trip/{tripId}")
+   // public ResponseEntity<List<Reservation>> getReservationsByTripId(@PathVariable("tripId") int tripId) {
+       // logger.info("Received request to get reservations by tripId: {}", tripId);
+        // List<ReservationResponse> reservations = reservationService.getReservationByTripIdWithTrip(tripId);
+    //    List<Reservation> reservations = reservationService.getReservationByTripId(tripId);
+
+
+    //    logger.info("Retrieved reservations for tripId: {}", tripId);
+     //   return new ResponseEntity<>(reservations, HttpStatus.OK);
+   // }
+
     @GetMapping("/reservations/by-trip/{tripId}")
-    public ResponseEntity<List<ReservationResponse>> getReservationsByTripId(@PathVariable("tripId") int tripId) {
-        logger.info("Received request to get reservations by tripId: {}", tripId);
-        List<ReservationResponse> reservations = reservationService.getReservationByTripIdWithTrip(tripId);
-        logger.info("Retrieved reservations for tripId: {}", tripId);
-        return new ResponseEntity<>(reservations, HttpStatus.OK);
+    public ResponseEntity<List<?>> getReservationsByTripId(
+            @PathVariable("tripId") int tripId,
+            @RequestParam(name = "includeTrips", required = false, defaultValue = "false") boolean includeTrips) {
+        logger.info("Received request to get reservations by tripId: {}, includeTrips: {}", tripId, includeTrips);
+
+        if (includeTrips) {
+            List<ReservationResponse> reservationsWithTrips = reservationService.getReservationByTripIdWithTrip(tripId);
+            logger.info("Retrieved reservations with trip details for tripId: {}", tripId);
+            return new ResponseEntity<>(reservationsWithTrips, HttpStatus.OK);
+        } else {
+            List<Reservation> reservations = reservationService.getReservationByTripId(tripId);
+            logger.info("Retrieved reservations for tripId: {}", tripId);
+            return new ResponseEntity<>(reservations, HttpStatus.OK);
+        }
     }
+
+
 
     // Método para convertir String a Date
     private Date parseDate(String dateStr) {
