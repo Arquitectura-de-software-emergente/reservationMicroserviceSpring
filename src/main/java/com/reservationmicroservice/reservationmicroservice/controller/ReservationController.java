@@ -42,7 +42,7 @@ public class ReservationController {
         return new ResponseEntity<>(createdReservation, HttpStatus.CREATED);
     }
 
-    @GetMapping("/reservations")
+    @GetMapping("/reservation")
     public ResponseEntity<List<ReservationResponse>> getAllReservations() {
         logger.info("Received request to get all reservations");
         List<ReservationResponse> reservations = reservationService.getAllReservations();
@@ -85,7 +85,7 @@ public class ReservationController {
         }
     }
 
-    @GetMapping("/reservations/by-tourist/{touristId}")
+    @GetMapping("/reservation/by-tourist/{touristId}")
     public ResponseEntity<List<ReservationResponse>> getReservationsByTouristId(@PathVariable("touristId") int touristId) {
         logger.info("Received request to get reservations by touristId: {}", touristId);
         List<ReservationResponse> reservations = reservationService.getReservationByTouristIdWithTrip(touristId);
@@ -104,7 +104,7 @@ public class ReservationController {
      //   return new ResponseEntity<>(reservations, HttpStatus.OK);
    // }
 
-    @GetMapping("/reservations/by-trip/{tripId}")
+    @GetMapping("/reservation/by-trip/{tripId}")
     public ResponseEntity<List<?>> getReservationsByTripId(
             @PathVariable("tripId") int tripId,
             @RequestParam(name = "includeTrips", required = false, defaultValue = "false") boolean includeTrips) {
