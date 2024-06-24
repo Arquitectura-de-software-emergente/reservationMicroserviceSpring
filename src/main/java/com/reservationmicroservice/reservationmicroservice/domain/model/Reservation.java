@@ -1,4 +1,4 @@
-package com.reservationmicroservice.reservationmicroservice.entities;
+package com.reservationmicroservice.reservationmicroservice.domain.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

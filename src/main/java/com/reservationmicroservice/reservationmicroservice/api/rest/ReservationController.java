@@ -1,9 +1,9 @@
-package com.reservationmicroservice.reservationmicroservice.controller;
+package com.reservationmicroservice.reservationmicroservice.api.rest;
 
-import com.reservationmicroservice.reservationmicroservice.dto.ReservationDto;
-import com.reservationmicroservice.reservationmicroservice.entities.Reservation;
-import com.reservationmicroservice.reservationmicroservice.http.ReservationResponse;
-import com.reservationmicroservice.reservationmicroservice.service.impl.ReservationServiceImpl;
+import com.reservationmicroservice.reservationmicroservice.mapping.dto.ReservationDto;
+import com.reservationmicroservice.reservationmicroservice.domain.model.Reservation;
+import com.reservationmicroservice.reservationmicroservice.domain.model.ReservationResponse;
+import com.reservationmicroservice.reservationmicroservice.service.ReservationServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

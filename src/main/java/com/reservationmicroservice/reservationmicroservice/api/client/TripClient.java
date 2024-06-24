@@ -1,6 +1,6 @@
-package com.reservationmicroservice.reservationmicroservice.client;
+package com.reservationmicroservice.reservationmicroservice.api.client;
 
-import com.reservationmicroservice.reservationmicroservice.dto.TripDto;
+import com.reservationmicroservice.reservationmicroservice.mapping.dto.TripDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;

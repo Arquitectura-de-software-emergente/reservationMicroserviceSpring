@@ -1,11 +1,11 @@
-package com.reservationmicroservice.reservationmicroservice.service.impl;
+package com.reservationmicroservice.reservationmicroservice.service;
 
-import com.reservationmicroservice.reservationmicroservice.client.TripClient;
-import com.reservationmicroservice.reservationmicroservice.dto.TripDto;
-import com.reservationmicroservice.reservationmicroservice.entities.Reservation;
-import com.reservationmicroservice.reservationmicroservice.http.ReservationResponse;
-import com.reservationmicroservice.reservationmicroservice.repository.ReservationRepository;
-import com.reservationmicroservice.reservationmicroservice.service.ReservationService;
+import com.reservationmicroservice.reservationmicroservice.api.client.TripClient;
+import com.reservationmicroservice.reservationmicroservice.mapping.dto.TripDto;
+import com.reservationmicroservice.reservationmicroservice.domain.model.Reservation;
+import com.reservationmicroservice.reservationmicroservice.domain.model.ReservationResponse;
+import com.reservationmicroservice.reservationmicroservice.domain.persistence.ReservationRepository;
+import com.reservationmicroservice.reservationmicroservice.domain.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

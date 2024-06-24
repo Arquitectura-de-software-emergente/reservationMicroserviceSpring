@@ -1,4 +1,4 @@
-package com.reservationmicroservice.reservationmicroservice.dto;
+package com.reservationmicroservice.reservationmicroservice.mapping.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,6 +1,6 @@
-package com.reservationmicroservice.reservationmicroservice.repository;
+package com.reservationmicroservice.reservationmicroservice.domain.persistence;
 
-import com.reservationmicroservice.reservationmicroservice.entities.Reservation;
+import com.reservationmicroservice.reservationmicroservice.domain.model.Reservation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 

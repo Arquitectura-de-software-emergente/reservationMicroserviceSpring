@@ -1,7 +1,7 @@
-package com.reservationmicroservice.reservationmicroservice.service;
+package com.reservationmicroservice.reservationmicroservice.domain.service;
 
-import com.reservationmicroservice.reservationmicroservice.entities.Reservation;
-import com.reservationmicroservice.reservationmicroservice.http.ReservationResponse;
+import com.reservationmicroservice.reservationmicroservice.domain.model.Reservation;
+import com.reservationmicroservice.reservationmicroservice.domain.model.ReservationResponse;
 
 import java.util.List;
 

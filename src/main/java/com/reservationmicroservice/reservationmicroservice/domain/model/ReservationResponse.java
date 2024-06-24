@@ -1,6 +1,6 @@
-package com.reservationmicroservice.reservationmicroservice.http;
+package com.reservationmicroservice.reservationmicroservice.domain.model;
 
-import com.reservationmicroservice.reservationmicroservice.dto.TripDto;
+import com.reservationmicroservice.reservationmicroservice.mapping.dto.TripDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
